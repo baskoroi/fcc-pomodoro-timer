@@ -5,6 +5,7 @@
 
 body {
 	background-color: #252225;
+    padding-top: 36px;
 }
 
 body, body * {
@@ -13,12 +14,12 @@ body, body * {
 	     -o-box-sizing: border-box;
 	        box-sizing: border-box;
 
-	color: #ECF0F1;
+    color: #FFFFFF;
 
 	font-family: "Raleway", sans-serif;
 }
 
-#main {
+.main {
 	width: 400px;
 	margin: 0 auto;
 	overflow: hidden;
@@ -26,6 +27,7 @@ body, body * {
 
 .card {
     overflow: hidden;
+    margin-bottom: 24px;
 }
 
 header, footer {
@@ -47,6 +49,8 @@ header h1 {
 a {
     text-decoration: none;
     color: #E74C3C;
+
+    cursor: pointer;
 }
 
 a:hover, .logo-accent {
@@ -96,6 +100,95 @@ a:hover, .logo-accent {
     opacity: 1;
     background: inherit;
     animation: mask 10s steps(1, end) infinite;
+}
+
+.time {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    padding-top: 48px;
+    z-index: 400;
+
+    text-align: center;
+}
+
+.time h2 {
+    font-weight: 400;
+}
+
+.panel-col {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.panel-col h3 {
+    line-height: .6em;
+}
+
+.panel-buttons a {
+    display: block;
+    float: left;
+
+    width: 36px;
+    height: 36px;
+    padding-top: 6px;
+
+    font-weight: bold;
+    font-size: 16pt;
+
+    color: #000000;
+}
+
+.panel-buttons {
+    overflow: hidden;
+    margin-left: -webkit-calc((100% - 120px) / 2);
+    margin-left: -moz-calc((100% - 120px) / 2);
+    margin-left: -o-calc((100% - 120px) / 2);
+    margin-left: calc((100% - 120px) / 2);
+}
+
+.work a {
+    background-color: #AADB18;
+}
+
+.rest a {
+    background-color: #E74C3C;
+}
+
+.panel-col input[type="text"] {
+    display: block;
+    float: left;
+
+    width: 48px;
+    height: 36px;
+    text-align: center;
+    color: #000000;
+}
+
+.alarm-control {
+    text-align: center;
+}
+
+.alarm-control select {
+    width: 160px;
+}
+
+.alarm-control select, .alarm-control select * {
+    color: #000000;
+}
+
+.preview-alarm {
+    background-color: #E74C3C;
+    color: #000000;
+
+    padding: 4px 8px;
+}
+
+.preview-alarm:hover {
+    background-color: #AADB18;
+    color: #000000;
 }
 
 @keyframes rota {

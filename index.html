@@ -16,26 +16,51 @@
 <body>
 	
 	<section class="main">
-		<header class="card">
+		<header>
 			<h1><span class="logo-accent">P</span>omodoro <span class="logo-accent">T</span>imer</h1>
 		</header>
-        <div class="panel card">
-            <div class="work panel-col">
-                
-            </div>
-            <div class="rest panel-col">
-                
-            </div>
-        </div>
 		<div class="wrapper card">
             <div class="timer">
                 <div class="spinner pie"></div>
                 <div class="filler pie"></div>
                 <div class="mask"></div>
+                <div class="time">
+                    <h1>25:00</h1>
+                    <h2>Start</h2>
+                </div>
             </div>
         </div>
+        <div class="time-control panel card">
+            <div class="work panel-col">
+                <h3>Work (mins)</h3>
+                <div class="panel-buttons">
+                    <a class="minus">-</a>
+                    <input type="text" value="25">
+                    <a class="plus">+</a>
+                </div>
+            </div>
+            <div class="rest panel-col">
+                <h3>Rest (mins)</h3>
+                <div class="panel-buttons">
+                    <a class="minus">-</a>
+                    <input type="text" value="5">
+                    <a class="plus">+</a>
+                </div>
+            </div>
+        </div>
+        <div class="alarm-control panel card">
+            <label>Select alarm:</label> 
+            <select name="alarm">
+                <option value="rooster">Rooster</option>
+                <option value="fog-horn">Foghorn Barge</option>
+                <option value="temple-bell">Japanese Temple Bell Small</option>
+                <option value="woop-woop">Woop Woop</option>
+            </select>
+            <a class="preview-alarm">Preview</a>
+        </div>
 		<footer class="card">
-			<p><em>Designed and coded by <a href="https://github.com/baskoroi" target="_blank">Baskoro Indrayana</a>.</em></p>
+			<p>Designed and coded by <a href="https://github.com/baskoroi" target="_blank">Baskoro Indrayana</a>.</p>
+            <p>Sound credits to <a href="http://soundbible.com/tags-alarm.html" target="_blank">soundbible.com</a> (<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Attribution 3.0</a> License)</p>
 		</footer>
 	</section>
 
