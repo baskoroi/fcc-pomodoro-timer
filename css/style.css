@@ -1,0 +1,118 @@
+@font-face {
+	font-family: "Happy Fox Condensed";
+	src: url("http://res.cloudinary.com/baskoroi/raw/upload/v1470993409/HappyFox-Condensed_zq19b7.otf") format("opentype");
+}
+
+body {
+	background-color: #252225;
+}
+
+body, body * {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	color: #ECF0F1;
+
+	font-family: "Raleway", sans-serif;
+}
+
+#main {
+	width: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.card {
+    overflow: hidden;
+}
+
+header, footer {
+    text-align: center;
+}
+
+header h1, .logo-accent {
+	font-family: "Happy Fox Condensed", cursive;
+}
+
+header h1 {
+	font-size: 60pt;
+
+	color: #E74C3C;
+
+	line-height: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #E74C3C;
+}
+
+a:hover, .logo-accent {
+	color: #AADB18;
+}
+
+.timer {
+	margin: 0 auto;
+
+	width: 250px;
+	height: 250px;
+
+	position: relative;
+	background: #252225;
+}
+
+.pie {
+	width: 50%;
+	height: 100%;
+    transform-origin: 100% 50%;
+	position: absolute;
+	background: #E74C3C; /* color of the pie */
+	border: 10px solid rgba(0,0,0,0.4);
+}
+
+.spinner {
+	border-radius: 125px 0 0 125px;
+	z-index: 200;
+	border-right: none;
+	animation: rota 10s linear infinite;
+}
+
+.filler {
+	border-radius: 0 125px 125px 0;
+	z-index: 100;
+	border-left: none;
+	animation: fill 10s steps(1, end) infinite;
+	left: 50%;
+	opacity: 0;
+}
+
+.mask {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 300;
+    opacity: 1;
+    background: inherit;
+    animation: mask 10s steps(1, end) infinite;
+}
+
+@keyframes rota {
+	0%   { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes fill {
+	0%        { opacity: 0; }
+	50%, 100% { opacity: 1; }
+}
+
+@keyframes mask {
+	0%        { opacity: 1; }
+	50%, 100% { opacity: 0; }
+}
+
+footer {
+    font-size: 10pt;
+}
