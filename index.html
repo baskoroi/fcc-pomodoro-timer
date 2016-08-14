@@ -21,13 +21,20 @@
         </header>
         <div class="wrapper card">
             <div class="timer">
-                <div class="spinner pie"></div>
+                <h2>00:00</h2>
+                <svg width="240" height="240" xmlns="https://www.w3.org/2000/svg">
+                    <g>
+                        <title>Layer 1</title>
+                        <circle id="circle" class="circle-animation" r="210.08452" cx="121" cy="121" stroke-width="8" stroke="#AADB18" fill="none" />
+                    </g>
+                </svg>
+                <!-- <div class="spinner pie"></div>
                 <div class="filler pie"></div>
-                <div class="mask"></div>
-                <div class="time">
-                    <h1>25:00</h1>
-                    <h2>Start</h2>
-                </div>
+                <div class="mask"></div> -->
+                <!-- <div class="time">
+                    <h1 class="mmss">0:00</h1>
+                    <h2 class="status">Start</h2>
+                </div> -->
             </div>
         </div>
         <div class="time-control panel card">
@@ -35,7 +42,7 @@
                 <h3>Work (mins)</h3>
                 <div class="panel-buttons">
                     <a class="minus">-</a>
-                    <input type="text" value="25">
+                    <input type="text">
                     <a class="plus">+</a>
                 </div>
             </div>
@@ -43,7 +50,7 @@
                 <h3>Rest (mins)</h3>
                 <div class="panel-buttons">
                     <a class="minus">-</a>
-                    <input type="text" value="5">
+                    <input type="text">
                     <a class="plus">+</a>
                 </div>
             </div>
@@ -51,9 +58,9 @@
         <div class="alarm-control panel card">
             <label>Select alarm:</label> 
             <select name="alarm">
-                <option value="rooster">Rooster</option>
-                <option value="fog-horn">Foghorn Barge</option>
-                <option value="temple-bell">Japanese Temple Bell Small</option>
+                <option value="rooster" selected>Rooster</option>
+                <option value="foghorn">Foghorn Barge</option>
+                <option value="japanese-bell">Japanese Temple Bell Small</option>
                 <option value="woop-woop">Woop Woop</option>
             </select>
             <a class="preview-alarm">Preview</a>

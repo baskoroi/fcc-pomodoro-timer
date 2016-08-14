@@ -5,7 +5,6 @@
 
 body {
     background-color: #252225;
-    padding-top: 36px;
 }
 
 body, body * {
@@ -20,7 +19,7 @@ body, body * {
 }
 
 .main {
-    width: 400px;
+    width: 360px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -43,7 +42,7 @@ header h1 {
 
     color: #E74C3C;
 
-    line-height: 0;
+    line-height: 0.8em;
 }
 
 a {
@@ -57,22 +56,51 @@ a:hover, .logo-accent {
     color: #AADB18;
 }
 
-.timer {
+.wrapper {
+    width: 240px;
     margin: 0 auto;
-
-    width: 250px;
-    height: 250px;
-
-    position: relative;
-    background: #252225;
 }
 
-.pie {
+.timer {
+    position: relative;
+    float: left;
+}
+
+.timer h2 {
+    text-align: center;
+    position: absolute;
+    line-height: 120px;
+    width: 100%;
+}
+
+svg {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.circle-animation {
+    stroke-dasharray: 660;
+    stroke-dashoffset: 660;
+    transition: all 1s linear;
+}
+
+/* .timer:active {
+    width: 225px;
+    height: 225px;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+}
+
+.timer:active .time {
+    font-size: 90%;
+} */
+
+/* .pie {
     width: 50%;
     height: 100%;
     transform-origin: 100% 50%;
     position: absolute;
-    background: #E74C3C; /* color of the pie */
+    background: #AADB18; color of the pie
     border: 10px solid rgba(0,0,0,0.4);
 }
 
@@ -80,16 +108,26 @@ a:hover, .logo-accent {
     border-radius: 125px 0 0 125px;
     z-index: 200;
     border-right: none;
-    animation: rota 10s linear infinite;
+    -webkit-animation: rota linear infinite paused;
+    animation: rota linear infinite paused;
+}
+
+.spinner-full {
+    transform: rotate(360deg);
 }
 
 .filler {
     border-radius: 0 125px 125px 0;
     z-index: 100;
     border-left: none;
-    animation: fill 10s steps(1, end) infinite;
+    -webkit-animation: fill steps(1, end) infinite paused;
+    animation: fill steps(1, end) infinite paused;
     left: 50%;
     opacity: 0;
+}
+
+.filler-full {
+    opacity: 1;
 }
 
 .mask {
@@ -99,17 +137,24 @@ a:hover, .logo-accent {
     z-index: 300;
     opacity: 1;
     background: inherit;
-    animation: mask 10s steps(1, end) infinite;
+    -webkit-animation: mask steps(1, end) infinite paused;
+    animation: mask steps(1, end) infinite paused;
 }
 
-.time {
+.mask-full {
+    opacity: 0;
+} */
+
+/* .time {
     position: absolute;
     width: 100%;
     height: 100%;
 
     padding-top: 48px;
     z-index: 400;
+} */
 
+.time * {
     text-align: center;
 }
 
