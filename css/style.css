@@ -69,24 +69,6 @@ a:hover, .logo-accent {
     float: left;
 }
 
-/* .timer h2 {
-    text-align: center;
-    position: absolute;
-    line-height: 120px;
-    width: 100%;
-}
-
-svg {
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-
-.circle-animation {
-    stroke-dasharray: 660;
-    stroke-dashoffset: 660;
-    transition: all 1s linear;
-} */
-
 .timer:active {
     width: 225px;
     height: 225px;
