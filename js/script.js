@@ -245,6 +245,7 @@
                 for (let i = 0; i < elements.timer.pie.length; i++) {
                     elements.timer.pie[i].style.backgroundColor = (status.isWorking) ? colors.green : colors.red;
                 }
+
                 control.currentTime.set(
                     (status.isWorking) ? status.work : status.rest, 0
                 );
@@ -273,6 +274,8 @@
     {
         elements.work.minutes.value = status.work;
         elements.rest.minutes.value = status.rest;
+
+        elements.timer.time.status.innerHTML = 'Start?';
 
         // to initialize the time display with the default value
         updateTimeDisplay(false);
@@ -348,6 +351,7 @@
                 }
                 remainingMs = 0;
                 intervalId = window.setInterval(updateTimeDisplay, 1000, true);
+                elements.timer.time.status.innerHTML = (status.isWorking) ? 'Work' : 'Rest';
             } else {
                 if (!!intervalId) {
                     window.clearInterval(intervalId);
@@ -355,6 +359,9 @@
                 
                 remainingMs = status.currentTime.getMilliseconds();
                 console.log('remainingMs = ', remainingMs);
+
+                elements.timer.time.status.innerHTML = 'Paused';
+
                 animation.timer.pause();
             }
         });
