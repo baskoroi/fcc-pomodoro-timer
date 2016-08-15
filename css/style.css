@@ -57,16 +57,19 @@ a:hover, .logo-accent {
 }
 
 .wrapper {
-    width: 240px;
+    width: 250px;
     margin: 0 auto;
 }
 
 .timer {
+    width: 250px;
+    height: 250px;
+    background: #252225;
     position: relative;
     float: left;
 }
 
-.timer h2 {
+/* .timer h2 {
     text-align: center;
     position: absolute;
     line-height: 120px;
@@ -82,9 +85,9 @@ svg {
     stroke-dasharray: 660;
     stroke-dashoffset: 660;
     transition: all 1s linear;
-}
+} */
 
-/* .timer:active {
+.timer:active {
     width: 225px;
     height: 225px;
     margin-top: 12.5px;
@@ -93,14 +96,14 @@ svg {
 
 .timer:active .time {
     font-size: 90%;
-} */
+}
 
-/* .pie {
+.pie {
     width: 50%;
     height: 100%;
     transform-origin: 100% 50%;
     position: absolute;
-    background: #AADB18; color of the pie
+    background: #AADB18; /* color of the pie */
     border: 10px solid rgba(0,0,0,0.4);
 }
 
@@ -112,10 +115,6 @@ svg {
     animation: rota linear infinite paused;
 }
 
-.spinner-full {
-    transform: rotate(360deg);
-}
-
 .filler {
     border-radius: 0 125px 125px 0;
     z-index: 100;
@@ -124,10 +123,6 @@ svg {
     animation: fill steps(1, end) infinite paused;
     left: 50%;
     opacity: 0;
-}
-
-.filler-full {
-    opacity: 1;
 }
 
 .mask {
@@ -141,18 +136,14 @@ svg {
     animation: mask steps(1, end) infinite paused;
 }
 
-.mask-full {
-    opacity: 0;
-} */
-
-/* .time {
+.time {
     position: absolute;
     width: 100%;
     height: 100%;
 
     padding-top: 48px;
     z-index: 400;
-} */
+}
 
 .time * {
     text-align: center;
